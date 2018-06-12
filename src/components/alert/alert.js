@@ -7,7 +7,7 @@ const Alert = () =>{
         <div className="alert">
         <div className="alertContainer">
             <div className="alertHeader">
-                <h4>Alert</h4>
+                <h3>Alert</h3>
                 <p>...</p>
             </div>
             <p>You have 2 visits today:</p>

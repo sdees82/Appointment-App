@@ -1,0 +1,37 @@
+.canceled{
+    background: linear-gradient(to right, #facac9, #f8a6ab );
+    width: 30rem;
+    margin-left: 15rem;
+    border-radius: .3rem;
+}
+.canceled .canceledContainer{
+    padding: .5rem 1rem;
+}
+.canceled .canceledContainer .canceledHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.canceled .canceledContainer .canceledHeader h3{
+    color: #fff;
+}
+.canceled .canceledContainer .canceledaHeader p{
+    font-size: 20rem;
+    color: #b9b9fc;
+}
+.canceled .canceledContainer{
+    text-align: left;
+    color: #fff;
+    margin: 0;
+}
+.canceled .canceledContainer p:nth-child(1){
+    margin: 0;
+}
+.canceled .canceledContainer p:nth-child(3){
+    color: #e28383;
+    font-weight: bold;
+    margin: 0;
+}
+
+.canceled .canceledContainer .canceledDate p{
+    margin: 0;
+}

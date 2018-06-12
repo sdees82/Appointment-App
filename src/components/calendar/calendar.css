@@ -1,0 +1,19 @@
+.calendar{
+    height: 25rem;
+    width: 30rem;
+    background: #fcfcfe;
+    margin-left: 15rem;
+    border-radius: .3rem;
+}
+.calendar .calendarContainer{
+    padding: 2rem 2rem;
+}
+.calendar .calendarContainer .calendarDay{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.calendar .calendarContainer .calendarDay span{
+    color: #6c6de1;
+    font-weight: bold;
+}

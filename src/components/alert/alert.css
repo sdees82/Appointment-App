@@ -11,10 +11,12 @@
     display: flex;
     justify-content: space-between;
 }
-.alert .alertContainer .alertHeader h4{
+.alert .alertContainer .alertHeader h3{
     color: #fff;
 }
-
+.alert .alertContainer .alertHeader .dots{
+    font-size: 2rem;
+}
 .alert .alertContainer  p{
     text-align: left;
     color: #d2d7f9;

@@ -25,7 +25,7 @@
     background: #7777e5;
 }
 .sidebar .categories:active{
-    border: 1px inset #6c6de4;
+    /* border: .5px inset #6c6de4; */
 }
 .sidebar div:nth-child(1){
     background: #7777e5;
