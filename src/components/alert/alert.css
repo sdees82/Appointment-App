@@ -1,0 +1,35 @@
+.alert{
+    background: linear-gradient(to right, #9495ea, #6c6de4 );
+    width: 30rem;
+    margin-left: 15rem;
+    border-radius: .3rem;
+}
+.alert .alertContainer{
+    padding: .5rem 1rem;
+}
+.alert .alertContainer .alertHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.alert .alertContainer .alertHeader h4{
+    color: #fff;
+}
+
+.alert .alertContainer  p{
+    text-align: left;
+    color: #d2d7f9;
+    margin: 0;
+}
+.alert .alertContainer  ul{
+    padding: 0 1rem;
+}
+.alert .alertContainer  ul li{
+    padding: .3rem 0;
+    text-align: left;
+    color: #fff;
+}
+
+.alert .alertContainer  ul li span{
+    color: #d2d7f9;
+    margin: .5rem 1rem;
+}
