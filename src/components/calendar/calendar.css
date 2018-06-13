@@ -1,5 +1,5 @@
 .calendar{
-    height: 25rem;
+    height: auto;
     width: 30rem;
     background: #fcfcfe;
     margin-left: 15rem;
@@ -12,8 +12,23 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    padding: 1rem 0;
 }
 .calendar .calendarContainer .calendarDay span{
     color: #6c6de1;
     font-weight: bold;
 }
+
+.calendar .calendarContainer .weekDay{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: space-around;
+    grid-gap: 1rem;
+}
+
+/* .calendar .calendarContainer .weekDay .row span{
+    display: inline-block;
+    margin: auto;
+} */
