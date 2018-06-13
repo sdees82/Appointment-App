@@ -8,11 +8,23 @@
 .calendar .calendarContainer{
     padding: 2rem 2rem;
 }
+.calendar .calendarContainer .calendarMonth{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+.calendar .calendarContainer .calendarMonth span{
+    color: #19144d;
+    font-weight: bold;
+}
+.calendar .calendarContainer .calendarMonth img{
+    opacity: .3;
+}
 .calendar .calendarContainer .calendarDay{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 .calendar .calendarContainer .calendarDay span{
     color: #6c6de1;
@@ -28,7 +40,12 @@
     grid-gap: 1rem;
 }
 
-/* .calendar .calendarContainer .weekDay .row span{
-    display: inline-block;
-    margin: auto;
-} */
+.calendar .calendarContainer .weekDay span{
+    font-weight: bold;
+}
+.calendar .calendarContainer .weekDay .previousMonth{
+    color: #c7c7d2;
+}
+.calendar .calendarContainer .weekDay .endDay{
+    color: #ef5670;
+}

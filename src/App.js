@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Appointment from './components/appointment/appointment';
 import Sidebar from './components/sidebar/sidebar';
-import Alert from './components/alert/alert';
-import Canceled from './components/canceled/canceled';
-import Calendar from './components/calendar/calendar';
+import MainContainer from './components/mainContainer/mainContainer';
 
 class App extends Component {
   render() {
@@ -12,9 +10,7 @@ class App extends Component {
       <div className="App">
       <Appointment/>
        <Sidebar/>
-       <Calendar/>
-       <Alert/>
-       <Canceled/>
+       <MainContainer/>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './appointment.css';
+import Me from '../../images/me.jpg'
 
 const Appointment = () =>{
     return(
@@ -7,8 +8,13 @@ const Appointment = () =>{
             <button className="makeAppointmentButton">Make an appointment</button>
 
             <div className="profileContainer">
-            <div className="profilePic"/>
-            <p>Marie Waters</p>
+            <div className="profilePic">
+                <img src={Me}/>
+            </div>
+            <p>Sean Dees</p>
+            <select>
+                <option></option>
+            </select>
             </div>
          </div>
     );

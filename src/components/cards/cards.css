@@ -1,0 +1,84 @@
+.cardsContainer .cards{
+    width: 30%;
+    background: #fff;
+    height: auto;
+    padding: 1rem 0;
+}
+.cardsContainer .cards .container{
+    padding: 1rem 1rem;
+}
+.cardsContainer .cards .container .cardsHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding: 0rem 2rem; */
+}
+.cardsContainer .cards .container .cardsHeader .profilePic{
+    width: 4rem;
+    height: 4rem;
+    margin-right: .5rem;
+    border-radius: 2rem;
+    background: #f6c5e6;
+    box-shadow: 0px 4px 20px #e3e4f7;
+}
+.cardsContainer .cards .container .cardsHeader .profileTitle p:nth-child(1){
+    color: #1b1751;
+    font-weight: bold;
+    margin: .2rem 0;
+}
+.cardsContainer .cards .container .cardsHeader .profileTitle p:nth-child(2){
+    color: #c7c7d2;
+    text-align: left;
+    font-size: .9rem;
+    margin: .2rem 0;
+}
+.cardsContainer .cards .container .profileDetails{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.cardsContainer .cards .container .profileDetails .location{
+    display: flex;
+    text-align: center;
+
+}
+.cardsContainer .cards .container .profileDetails p{
+    margin: 0;
+}
+
+
+.button{
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    margin-right: .5rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.confirm{
+    background: #eaeafc;
+    color: #8180dd;
+}
+
+.cancel{
+    background: #fefef7;
+    color: #ed8da7;
+}
+.cardsContainer .cards .container .profileButtons .confirm{
+    font-size: 1.8;
+}
+.cardsContainer .cards .container .profileButtons .confirm p{
+    display: inline-block;
+    height: 1rem;
+    width: 1.8rem;
+    background: url('../../images/check.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid #8180dd;
+    border-radius: 50rem;
+    margin: 0 .5rem;
+}

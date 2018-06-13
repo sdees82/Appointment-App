@@ -1,5 +1,7 @@
 import React from 'react';
 import './calendar.css';
+import Back from '../../images/back.png';
+import Forward from '../../images/forward.png';
 
 const Calendar = () =>{
     return(
@@ -7,9 +9,9 @@ const Calendar = () =>{
             <div className="calendarContainer">
 
                 <div className="calendarMonth">
-                    <img src=""/>
+                    <img src={Back}/>
                     <span>April 2018</span>
-                    <img src=""/>
+                    <img src={Forward}/>
                 </div>
                 <div className="calendarDay">
                     <span>MON</span>
@@ -22,10 +24,10 @@ const Calendar = () =>{
                 </div>
                 <div className="weekDay">
                     
-                        <span>28</span>
-                        <span>29</span>
-                        <span>30</span>
-                        <span>31</span>
+                        <span class="previousMonth">28</span>
+                        <span class="previousMonth">29</span>
+                        <span class="previousMonth">30</span>
+                        <span class="previousMonth">31</span>
                         <span>1</span>
                         <span>2</span>
                         <span className="endDay">3</span>

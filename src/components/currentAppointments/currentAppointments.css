@@ -1,0 +1,78 @@
+.button1{
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    margin-right: .5rem;
+    background: linear-gradient(to right, #9495ea, #6c6de4 );
+    color: #fff;
+    border: none;
+}
+.button2{
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    background: #eaeafc;
+    border: none;
+    color: #8180dd
+}
+
+.arrowBack{
+    background: url('../../images/back.png') #eaeafc;
+
+}
+.arrowForward{
+    background: url('../../images/forward.png') #eaeafc;
+}
+.arrowButton{
+    border-radius: 2rem;
+    padding: 1rem ;
+    margin-right: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+.currentAppointments{
+    width: 80%;
+    height: auto;
+    background: #f5f6fb;
+    border-radius: .3rem;
+}
+
+.currentAppointments .container{
+    padding: 1rem 2rem;
+}
+.currentAppointments .container header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+}
+.currentAppointments .container header h3{
+    color: #1b1751;
+}
+
+.currentAppointments .container header .dots{
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1;
+}
+.currentAppointments .container .buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0  0 2rem 0;
+}
+.currentAppointments .container .buttonContainer .sectionRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.currentAppointments .container .buttonContainer .sectionRight span{
+    padding-right: 1rem;
+}
+.currentAppointments .container .buttonContainer .sectionRight select{
+    border: none;
+}
+.currentAppointments .container .cardsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
