@@ -6,7 +6,7 @@ const CurrentAppointments = () =>{
     return (
         <main className="currentAppointments">
             <div className="container">
-                <header class="header">
+                <header className="header">
                     <h3>Appointments</h3>
                     <p className="dots">...</p>
                 </header>
@@ -23,7 +23,7 @@ const CurrentAppointments = () =>{
                     <div className="sectionRight">
                         <span>Sort By: <strong>Date</strong></span>
                         <select>
-                            <option></option>
+                            <option selected>Today</option>
                         </select>
                     </div>
                 </section>

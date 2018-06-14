@@ -42,13 +42,14 @@
     height: 3rem;
     border-radius: 2rem;
 }
-.makeAppointment .profileContainer p{
-    font-weight: bold;
-}
+
 .makeAppointment .profileContainer select{
     border: none;
     padding: 1rem 0rem;
+    font-weight: bold;
+    text-indent: .8rem;
 }
+
 .makeAppointment .profileContainer select:focus{
     outline: none;
 }

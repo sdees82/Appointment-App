@@ -11,9 +11,10 @@ const Appointment = () =>{
             <div className="profilePic">
                 <img src={Me}/>
             </div>
-            <p>Sean Dees</p>
             <select>
-                <option></option>
+                <option selected>Sean Dees</option>
+                <option>Jeff Green</option>
+                <option>Jane Mansfield</option>
             </select>
             </div>
          </div>

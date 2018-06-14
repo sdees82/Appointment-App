@@ -1,10 +1,12 @@
 html, body{
   font-size: 16px;
+  min-height: 700px;
 }
 .App {
   text-align: center;
   width: 100%;
-  min-height: 100vh;
+  height: auto;
   background: #ebeef5;
+  min-height: 700px;
 }
 

@@ -1,19 +1,23 @@
 .mainContainer{
+    height: auto;
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.mainContainer .dashboard{
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 2rem;
 }
 .mainContainer .containerLeft{
-    height: 90vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-end;
 }
 .mainContainer .containerRight{
-    height: 90vh;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }

@@ -1,23 +1,14 @@
 import React from 'react';
 import './mainContainer.css';
-import Alert from '../alert/alert';
-import Canceled from '../canceled/canceled';
-import Calendar from '../calendar/calendar';
-import SearchDoctor from '../searchDoctor/searchDoctor';
-import CurrentAppointments from '../currentAppointments/currentAppointments';
+import Dashboard from '../dashboard/dashboard';
 
-const MainContainer = () =>{
+const MainContainer = ({routes}) =>{
     return(
         <div className="mainContainer">
-        <div className="containerLeft">
-            <Calendar/>
-            <Alert/>
-            <Canceled/>
-        </div>
-        <div className="containerRight">
-            <SearchDoctor/>
-            <CurrentAppointments/>
-        </div>
+        { routes === "dashboard"?
+            <Dashboard/>:
+            <h1>Testing</h1>
+        }
         </div>
     );
 }

@@ -5,15 +5,26 @@
     background: linear-gradient(to right, #9495ea, #6c6de4 );
     color: #fff;
     border: none;
+    cursor: pointer;
 }
 .button2{
     border-radius: 1rem;
     padding: .5rem 1rem;
     background: #eaeafc;
     border: none;
-    color: #8180dd
+    color: #8180dd;
+    cursor: pointer;
 }
-
+.button1:active{
+    border: inset .2px #7471d5;
+    outline: none;
+}
+.button2:active, .arrowBack:active, .arrowForward:active{
+    border: inset .3px #edeafc;
+}
+.button1:focus, .button2:focus, .arrowBack:focus, .arrowForward:focus, .confirm:focus, .cancel:focus{
+    outline: none;
+}
 .arrowBack{
     background: url('../../images/back.png') #eaeafc;
 
@@ -21,6 +32,7 @@
 .arrowForward{
     background: url('../../images/forward.png') #eaeafc;
 }
+
 .arrowButton{
     border-radius: 2rem;
     padding: 1rem ;
@@ -32,10 +44,10 @@
     cursor: pointer;
 }
 .currentAppointments{
-    width: 80%;
-    height: auto;
+    width: 57rem;
     background: #f5f6fb;
     border-radius: .3rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .currentAppointments .container{
@@ -60,13 +72,20 @@
     justify-content: space-between;
     padding: 0  0 2rem 0;
 }
+
 .currentAppointments .container .buttonContainer .sectionRight{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .currentAppointments .container .buttonContainer .sectionRight span{
+    font-size: .9rem;
     padding-right: 1rem;
+    color: gray;
+    font-weight: bold;
+}
+.currentAppointments .container .buttonContainer .sectionRight span strong{
+    color: #131313;
 }
 .currentAppointments .container .buttonContainer .sectionRight select{
     border: none;
@@ -74,5 +93,13 @@
 .currentAppointments .container .cardsContainer{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
+
+/* @media screen and (max-width: 50rem){
+    .currentAppointments{
+        width: 50%;
+        margin: auto;
+    }
+} */

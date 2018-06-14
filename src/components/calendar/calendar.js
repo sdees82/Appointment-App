@@ -24,10 +24,10 @@ const Calendar = () =>{
                 </div>
                 <div className="weekDay">
                     
-                        <span class="previousMonth">28</span>
-                        <span class="previousMonth">29</span>
-                        <span class="previousMonth">30</span>
-                        <span class="previousMonth">31</span>
+                        <span className="previousMonth">28</span>
+                        <span className="previousMonth">29</span>
+                        <span className="previousMonth">30</span>
+                        <span className="previousMonth">31</span>
                         <span>1</span>
                         <span>2</span>
                         <span className="endDay">3</span>
