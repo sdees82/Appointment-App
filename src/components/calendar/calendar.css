@@ -1,6 +1,6 @@
 .calendar{
     height: auto;
-    width: 30rem;
+    width: 65%;
     background: #fcfcfe;
     margin-left: 15rem;
     border-radius: .3rem;
@@ -49,4 +49,10 @@
 }
 .calendar .calendarContainer .weekDay .endDay{
     color: #ef5670;
+}
+
+@media screen and (max-width: 70rem){
+    .calendar{
+        margin: auto;
+    }
 }

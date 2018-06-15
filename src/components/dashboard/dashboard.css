@@ -1,0 +1,12 @@
+
+.mainContainer .dashboard{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+}
+
+@media screen and (max-width: 70rem){
+    .mainContainer .dashboard{
+        grid-template-columns: 1fr;
+    }
+}

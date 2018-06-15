@@ -4,11 +4,6 @@
     padding: 3rem 0;
 }
 
-.mainContainer .dashboard{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 2rem;
-}
 .mainContainer .containerLeft{
     height: 100%;
     width: 100%;
@@ -20,4 +15,10 @@
     height: auto;
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 70rem){
+    .mainContainer .containerLeft, .mainContainer .containerRight{
+        align-items: center;
+    }
 }

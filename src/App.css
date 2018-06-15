@@ -5,7 +5,6 @@ html, body{
 .App {
   text-align: center;
   width: 100%;
-  height: auto;
   background: #ebeef5;
   min-height: 700px;
 }

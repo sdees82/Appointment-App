@@ -1,8 +1,10 @@
 .searchDoctor{
-    width: 57rem;
+    width: 85%;
+    min-width: 50%;
     padding: 6rem 0;
     margin: 0 0 1rem;
     background: #fcfcfe;
     border-radius: .3rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+

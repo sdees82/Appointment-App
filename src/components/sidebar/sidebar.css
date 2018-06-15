@@ -9,7 +9,7 @@
     height: 100%;
     width: 7rem;
     background: #fdfdfd;
-    box-shadow: 5px 0px 25px #fafafafc;
+    box-shadow: 5px 0px 25px #fefefefe;
 }
 
 .sidebar .categories{
@@ -38,7 +38,7 @@
     border-radius: .8rem;
 }
 
-@media screen and (max-width: 50rem){
+@media screen and (max-width: 70rem){
     .sidebar{
         flex-direction: row;
         position: static;

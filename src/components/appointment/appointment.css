@@ -53,3 +53,15 @@
 .makeAppointment .profileContainer select:focus{
     outline: none;
 }
+
+@media screen and (max-width: 70rem){
+    .makeAppointment{
+        justify-content: space-around;
+    }
+    .makeAppointment .makeAppointmentButton{
+        margin: 0;
+    }
+    .makeAppointment .profileContainer{
+        margin-right: 0;
+    }
+}
