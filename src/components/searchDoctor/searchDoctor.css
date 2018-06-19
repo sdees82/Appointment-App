@@ -1,10 +1,35 @@
 .searchDoctor{
+    position: relative;
     width: 85%;
     min-width: 50%;
-    padding: 6rem 0;
+    /* padding: 6rem 0; */
     margin: 0 0 1rem;
     background: #fcfcfe;
     border-radius: .3rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.searchDoctor .searchCard{
+    position: absolute;
+    top: 2rem;
+    padding: .5rem 0;
+    right: 4rem;
+    /* height: 5rem; */
+    width: 13rem;
+    background: linear-gradient(to right, #9495ea, #6c6de4 );
+    border-radius: .3rem;
+}
+
+.searchDoctor .searchCard form .specialization,.searchDoctor .searchCard form .city {
+    display: block;
+    margin: 1rem auto;
+    padding: .5rem;
+    width: 80%;
+    border-radius: .5rem;
+    letter-spacing: 2px;
+}
+
+.searchDoctor .searchCard header h4{
+    color: #fff;
+    font-weight: bold;
+}
