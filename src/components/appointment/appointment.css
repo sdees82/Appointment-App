@@ -53,7 +53,16 @@
 .makeAppointment .profileContainer select:focus{
     outline: none;
 }
-
+.modalWindow{
+    padding: 2rem;
+}
+.modalWindow label{
+    padding: 2rem 0;
+}
+.modalWindow select{
+    display: block;
+    padding: .5rem 0;
+}
 @media screen and (max-width: 70rem){
     .makeAppointment{
         justify-content: space-around;
