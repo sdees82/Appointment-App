@@ -1,0 +1,18 @@
+.inbox{
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+}
+.inbox .inbox-right{
+    position: relative;
+    justify-self: center;
+    width: 70%;
+    background: #fff;
+}
+
+.inbox .inbox-right input{
+    position: absolute;
+    padding: 1rem 1px;
+    right: -5px;
+    bottom: 0;
+    width: 100%;
+}
