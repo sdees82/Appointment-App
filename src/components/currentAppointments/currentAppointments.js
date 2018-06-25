@@ -1,8 +1,8 @@
 import React from 'react';
 import './currentAppointments.css';
-import Cards from '../cards/cards';
+import AppList from '../appList/appList';
 
-const CurrentAppointments = () =>{
+const CurrentAppointments = ({appointments}) =>{
     return (
         <main className="currentAppointments">
             <div className="container">
@@ -28,9 +28,7 @@ const CurrentAppointments = () =>{
                     </div>
                 </section>
                 <section className="cardsContainer">
-                <Cards/>
-                <Cards/>
-                <Cards/>
+                <AppList appointments={appointments}/>
             </section>
             </div>
         </main>

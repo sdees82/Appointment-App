@@ -7,6 +7,7 @@ import MainContainer from './components/mainContainer/mainContainer';
 class App extends Component {
   constructor(props){
     super(props);
+
     this.state = {
       routes: "dashboard",
       open: false,
@@ -14,8 +15,22 @@ class App extends Component {
       appDate:"",
       appTime: "",
       greeting: false,
-      appointmentCards: ""
-    };
+      appointments: [{
+        doctor: "Dr Anthony Wagner",
+        specialty: "Dermatologist",
+        address1: "1268 High St apt #2",
+        address2: "Windsor, ON",
+        appDate: "6/24/2018",
+        appTime: "2:30pm"
+      },{
+        doctor: "Dr Sally Carter",
+        specialty: "Cardiologist",
+        address1: "1268 High St apt #2",
+        address2: "Windsor, ON",
+        appDate: "7/1/2018",
+        appTime: "10:30pm"
+      },]
+    }
   }
 
 handleChangeDoctor = (e) =>{
@@ -48,12 +63,13 @@ handleChangeTime = (e) =>{
   }
 
   render() {
-    const {open, greeting} = this.state;
+    const {open, greeting, appointments} = this.state;
+   
     return (
       <div className="App">
       <Appointment open={open} greeting={greeting} onCloseModal={this.onCloseModal} onOpenModal={this.onOpenModal} bookAppointment={this.bookAppointment} handleChangeDoctor={this.handleChangeDoctor} handleChangeDate={this.handleChangeDate} handleChangeTime={this.handleChangeTime}/>
        <Sidebar changeRoute={this.changeRoute}/>
-       <MainContainer routes={this.state.routes}/>
+       <MainContainer appointments={appointments} routes={this.state.routes}/>
       </div>
     );
   }
