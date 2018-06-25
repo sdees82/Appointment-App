@@ -5,7 +5,7 @@ import CalendarSmall from '../../images/calendarSmall.png';
 import Clock from '../../images/clock.png';
 import Doctor from '../../images/doctor1.jpg';
 
-const Cards = ({doctor, specialty, address1, address2, appDate, appTime}) =>{
+const Cards = ({doctor, specialty, address1, address2, appDate, appTime, cancelAppointment}) =>{
     return(
             <main className="cards">
                 <div className="container">
@@ -33,11 +33,12 @@ const Cards = ({doctor, specialty, address1, address2, appDate, appTime}) =>{
                 </section>
 
                 <section className="profileButtons">
-                    <button className=" button confirm"><p></p></button>
-                    <button className=" button cancel"><p></p></button>
+                    {/* <button className=" button confirm"><p></p></button> */}
+                    <button onClick={cancelAppointment} className=" button cancel"><p></p></button>
                 </section>
                 </div>
             </main>
+            
     );
 }
 

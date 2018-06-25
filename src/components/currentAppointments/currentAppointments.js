@@ -2,7 +2,7 @@ import React from 'react';
 import './currentAppointments.css';
 import AppList from '../appList/appList';
 
-const CurrentAppointments = ({appointments}) =>{
+const CurrentAppointments = ({appointments, cancelAppointment}) =>{
     return (
         <main className="currentAppointments">
             <div className="container">
@@ -16,10 +16,6 @@ const CurrentAppointments = ({appointments}) =>{
                         <button className="button1">Upcoming</button>
                         <button className="button2">Past</button>
                     </div>
-                    <div className="sectionMiddle">
-                        <button className="arrowButton arrowBack"/>
-                        <button className="arrowButton arrowForward"/>
-                    </div>
                     <div className="sectionRight">
                         <span>Sort By: <strong>Date</strong></span>
                         <select>
@@ -28,7 +24,7 @@ const CurrentAppointments = ({appointments}) =>{
                     </div>
                 </section>
                 <section className="cardsContainer">
-                <AppList appointments={appointments}/>
+                <AppList appointments={appointments} cancelAppointment={cancelAppointment}/>
             </section>
             </div>
         </main>

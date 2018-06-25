@@ -12,6 +12,7 @@ const Appointment = ({open, onCloseModal, onOpenModal, bookAppointment, handleCh
             <div className="modalWindow">
                 <h4>Select a Doctor</h4>
                 <select id=" doctor" onChange={handleChangeDoctor}>
+                    <option>Select a Doctor</option>
                     <option defaultValue>Dr. Anthony Wagner</option>
                     <option>Dr. Mark Newton</option>
                     <option>Dr. Sarah Kelly</option>
@@ -19,12 +20,14 @@ const Appointment = ({open, onCloseModal, onOpenModal, bookAppointment, handleCh
 
                 <h4>Select a date</h4>
                 <select id=" appDate" onChange={handleChangeDate}>
+                    <option>Select a date</option>
                     <option>6/22/2018</option>
                     <option>6/23/2018</option>
                 </select>
 
                 <h4>Select a time</h4>
                 <select id=" appTime" onChange={handleChangeTime}>
+                    <option>Select a time</option>
                     <option>8am</option>
                     <option>9am</option>
                 </select>

@@ -6,7 +6,7 @@ import Calendar from '../calendar/calendar';
 import SearchDoctor from '../searchDoctor/searchDoctor';
 import CurrentAppointments from '../currentAppointments/currentAppointments';
 
-const Dashboard = ({appointments}) =>{
+const Dashboard = ({appointments, cancelAppointment}) =>{
     return(
         <div className="dashboard">
                 <div className="containerLeft">
@@ -16,7 +16,7 @@ const Dashboard = ({appointments}) =>{
                 </div>
              <div className="containerRight">
                     <SearchDoctor/>
-                    <CurrentAppointments appointments={appointments}/>
+                    <CurrentAppointments appointments={appointments} cancelAppointment={cancelAppointment}/>
                 </div>
             </div>
     );

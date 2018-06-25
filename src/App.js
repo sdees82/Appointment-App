@@ -21,35 +21,43 @@ class App extends Component {
         address1: "1268 High St apt #2",
         address2: "Windsor, ON",
         appDate: "6/24/2018",
-        appTime: "2:30pm"
-      },{
-        doctor: "Dr Sally Carter",
-        specialty: "Cardiologist",
-        address1: "1268 High St apt #2",
-        address2: "Windsor, ON",
-        appDate: "7/1/2018",
-        appTime: "10:30pm"
-      },]
+        appTime: "2:30pm",
+      }]
     }
   }
 
 handleChangeDoctor = (e) =>{
-  this.setState({...this.state.doctor, doctor: e.currentTarget.value});
+  this.setState({...this.state.appointments.doctor, doctor: e.target.value});
 }
 
 handleChangeDate = (e) =>{
-  this.setState({...this.state.appDate, doctor: e.currentTarget.value});
+  this.setState({...this.state.appointments.appDate, appDate: e.target.value});
 }
 
 handleChangeTime = (e) =>{
-  this.setState({...this.state.appTime, doctor: e.currentTarget.value});
+  this.setState({...this.state.appointments.appTime, appTime: e.target.value});
 }
 
   bookAppointment = (e) =>{
     e.preventDefault();
-    console.log("Appointment booked");
-    this.setState({ greeting: true });
+    const newApp = {
+      doctor: this.state.doctor,
+      appDate: this.state.appDate,
+      appTime: this.state.appTime
+    };
+
+    this.setState(prevState => ({
+      appointments: [...prevState.appointments, newApp]
+  }));
+    this.setState({ open: false });
 }
+
+cancelAppointment = (e) =>{
+  let newState = [...this.state.appointments];
+    delete newState[e];
+    this.setState({appointments: newState});
+}
+
   onOpenModal = () =>{
     this.setState({ open: true });
     console.log("clicked");
@@ -69,7 +77,7 @@ handleChangeTime = (e) =>{
       <div className="App">
       <Appointment open={open} greeting={greeting} onCloseModal={this.onCloseModal} onOpenModal={this.onOpenModal} bookAppointment={this.bookAppointment} handleChangeDoctor={this.handleChangeDoctor} handleChangeDate={this.handleChangeDate} handleChangeTime={this.handleChangeTime}/>
        <Sidebar changeRoute={this.changeRoute}/>
-       <MainContainer appointments={appointments} routes={this.state.routes}/>
+       <MainContainer appointments={appointments} cancelAppointment={this.cancelAppointment} routes={this.state.routes}/>
       </div>
     );
   }

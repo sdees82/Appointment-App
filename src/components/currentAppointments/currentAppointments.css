@@ -25,24 +25,7 @@
 .button1:focus, .button2:focus, .arrowBack:focus, .arrowForward:focus, .confirm:focus, .cancel:focus{
     outline: none;
 }
-.arrowBack{
-    background: url('../../images/back.png') #eaeafc;
 
-}
-.arrowForward{
-    background: url('../../images/forward.png') #eaeafc;
-}
-
-.arrowButton{
-    border-radius: 2rem;
-    padding: 1rem ;
-    margin-right: 1rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    border: none;
-    cursor: pointer;
-}
 .currentAppointments{
     width: 85%;
     min-width: 40%;
