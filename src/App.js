@@ -16,12 +16,32 @@ class App extends Component {
       appTime: "",
       greeting: false,
       appointments: [{
-        doctor: "Dr Anthony Wagner",
+        doctor: "Dr. Anthony Wagner",
         specialty: "Dermatologist",
         address1: "1268 High St apt #2",
         address2: "Windsor, ON",
         appDate: "6/24/2018",
         appTime: "2:30pm",
+      },
+      {
+        doctor: "Dr. Sarah Kelly",
+        specialty: "Dermatologist",
+        address1: "1268 High St apt #2",
+        address2: "Windsor, ON",
+        appDate: "6/24/2018",
+        appTime: "2:30pm",
+      },{
+        doctor: "Dr. Anthony Wagner",
+        specialty: "Dermatologist",
+        address1: "1268 High St apt #2",
+        address2: "Windsor, ON",
+        appDate: "6/24/2018",
+        appTime: "2:30pm",
+      }],
+      canAppList: [{
+        doctor: "",
+        specialty: "",
+        appTime: ""
       }]
     }
   }
@@ -38,6 +58,27 @@ handleChangeTime = (e) =>{
   this.setState({...this.state.appointments.appTime, appTime: e.target.value});
 }
 
+todayAlert = (newApp) =>{
+  const d = new Date();
+  const month = d.getMonth();
+  const day = d.getDate();
+  const year = d.getFullYear();
+  const currentDate = `${month + 1}/${day}/${year}`;
+  newApp.addDate == currentDate ? console.log("success"): console.log("not a success");
+  console.log(currentDate);
+  console.log(newApp.appDate);
+}
+
+clearApp = () =>{
+  console.log("connected");
+  let clearVisits = [{
+    doctor: "",
+    specialty: "",
+    appDate: ""
+  }];
+ this.setState({canAppList: clearVisits});  
+}
+
   bookAppointment = (e) =>{
     e.preventDefault();
     const newApp = {
@@ -50,12 +91,27 @@ handleChangeTime = (e) =>{
       appointments: [...prevState.appointments, newApp]
   }));
     this.setState({ open: false });
+    this.todayAlert(newApp);
 }
 
 cancelAppointment = (e) =>{
   let newState = [...this.state.appointments];
+  const {doctor, specialty, appDate} = newState[e];
+  const previousAppointments = this.state.canAppList[0].doctor !== ""? [...this.state.canAppList] :[];
+
+  const newAppList = {
+    doctor: doctor,
+    specialty: specialty,
+    appDate: appDate
+  };
+  
+  previousAppointments.push(newAppList);
+
     delete newState[e];
+    this.setState({canAppList: previousAppointments});
     this.setState({appointments: newState});
+    console.log(this.state.canAppList);
+    console.log("previous Appointments", previousAppointments);
 }
 
   onOpenModal = () =>{
@@ -71,13 +127,13 @@ cancelAppointment = (e) =>{
   }
 
   render() {
-    const {open, greeting, appointments} = this.state;
+    const {open, greeting, appointments, canAppList} = this.state;
    
     return (
       <div className="App">
       <Appointment open={open} greeting={greeting} onCloseModal={this.onCloseModal} onOpenModal={this.onOpenModal} bookAppointment={this.bookAppointment} handleChangeDoctor={this.handleChangeDoctor} handleChangeDate={this.handleChangeDate} handleChangeTime={this.handleChangeTime}/>
        <Sidebar changeRoute={this.changeRoute}/>
-       <MainContainer appointments={appointments} cancelAppointment={this.cancelAppointment} routes={this.state.routes}/>
+       <MainContainer appointments={appointments} canAppList={canAppList} cancelAppointment={this.cancelAppointment} routes={this.state.routes} clearApp={this.clearApp}/>
       </div>
     );
   }

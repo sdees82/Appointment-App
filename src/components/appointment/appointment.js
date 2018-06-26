@@ -21,8 +21,8 @@ const Appointment = ({open, onCloseModal, onOpenModal, bookAppointment, handleCh
                 <h4>Select a date</h4>
                 <select id=" appDate" onChange={handleChangeDate}>
                     <option>Select a date</option>
-                    <option>6/22/2018</option>
-                    <option>6/23/2018</option>
+                    <option>6/26/2018</option>
+                    <option>6/27/2018</option>
                 </select>
 
                 <h4>Select a time</h4>

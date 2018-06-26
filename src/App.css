@@ -6,6 +6,6 @@ html, body{
   text-align: center;
   width: 100%;
   background: #ebeef5;
-  min-height: 700px;
+  min-height: 100vh;
 }
 

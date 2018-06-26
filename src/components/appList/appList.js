@@ -7,7 +7,6 @@ return(
     <div className="appList">
 {
     appointments.map((val, index)=>{
-        console.log(index);
         { if(val !== undefined){
             return (
                 <Cards

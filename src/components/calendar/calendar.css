@@ -1,4 +1,24 @@
-.calendar{
+.react-calendar{
+    width: 65%;
+    height: 21rem;
+    background: #fcfcfe;
+    margin-left: 15rem;
+    border-radius: .3rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.react-calendar__navigation__label{
+    color: #19144d;
+    font-weight: bold;
+}
+.react-calendar__month-view__weekdays__weekday{
+    color: #6c6de1;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.react-calendar__tile{
+    font-size: .9rem;
+}
+/* .calendar{
     height: auto;
     width: 65%;
     background: #fcfcfe;
@@ -49,10 +69,10 @@
 }
 .calendar .calendarContainer .weekDay .endDay{
     color: #ef5670;
-}
+} */
 
 @media screen and (max-width: 70rem){
-    .calendar{
+    .react-calendar{
         margin: auto;
     }
 }

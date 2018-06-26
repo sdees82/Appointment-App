@@ -5,6 +5,9 @@ const AnyReactComponent = ({ text }) => <div>{ text }</div>;
 
 
 class GoogleMaps extends Component {
+  constructor(props){
+    super(props);
+  }
   static defaultProps = {
     center: { lat: 40.7446790, lng: -73.9485420 },
     zoom: 11

@@ -1,21 +1,49 @@
 import React from 'react';
 import './canceled.css';
 
-const Canceled = () =>{
+const Canceled = ({doctor, specality, appDate, canAppList, clearApp}) =>{
     return(
         <div className="canceled">
+        { canAppList[0].doctor === "" ||  canAppList[0].doctor === undefined || canAppList.length === 0?
               <div className="canceledContainer">
             <div className="canceledHeader">
                 <h3>Canceled visits</h3>
-                <p className="dots">...</p>
+                <span className="dots">...</span>
             </div>
-            <p>You have one canceled visit:</p>
-           <p>Mark Newton - Cardiologist</p>
+            <p>You have No canceled visits</p>
+           <p></p>
            <div className="canceledDate">
             <img src=""/>
-            <p>20/07/2018</p>
+            <p></p>
         </div>
+        </div>:
+
+         <div className="canceledContainer">
+            <div className="canceledHeader">
+                <h3>Canceled visits</h3>
+                <span onClick={clearApp} className="dots">...</span>
+            </div>
+            <p>{`You have  ${canAppList.length} canceled visit(s):`}</p>
+            {
+                 canAppList.map((val, index)=>{
+                     {
+                         return (
+                    <div className="canceledDetails" key={index}>
+                   <p>{`${canAppList[index].doctor} - ${canAppList[index].specialty}`}</p>
+                   <div className="canceledDate">
+                    <img src=""/>
+                    <p>{canAppList[index].appDate}</p>
+                </div>
+            </div>
+                         );
+                     }
+               })
+            }
+           
+           
+
         </div>
+        }
         </div>
     );
 }
