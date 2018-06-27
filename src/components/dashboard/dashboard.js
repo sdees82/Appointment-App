@@ -7,17 +7,17 @@ import '../calendar/calendar.css';
 import SearchDoctor from '../searchDoctor/searchDoctor';
 import CurrentAppointments from '../currentAppointments/currentAppointments';
 
-const Dashboard = ({appointments, cancelAppointment, canAppList, clearApp}) =>{
+const Dashboard = ({appointments, cancelAppointment, canAppList, clearApp, today, clearAlert, locations}) =>{
     return(
         <div className="dashboard">
                 <div className="containerLeft">
                     <Calendar/>
-                    <Alert/>
+                    <Alert today={today} clearAlert={clearAlert}/>
                     <Canceled canAppList={canAppList} clearApp={clearApp}/>
                 </div>
              <div className="containerRight">
-                    <SearchDoctor/>
-                    <CurrentAppointments appointments={appointments} canAppList={canAppList} cancelAppointment={cancelAppointment}/>
+                    <SearchDoctor locations={locations}/>
+                    <CurrentAppointments appointments={appointments} canAppList={canAppList} cancelAppointment={cancelAppointment} />
                 </div>
             </div>
     );

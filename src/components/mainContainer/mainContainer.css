@@ -10,12 +10,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: center;
 }
 .mainContainer .containerRight{
     height: auto;
     display: flex;
     flex-direction: column;
+   
 }
 
 @media screen and (max-width: 70rem){

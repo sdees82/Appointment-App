@@ -3,9 +3,9 @@ import './cards.css';
 import Location from '../../images/location.png';
 import CalendarSmall from '../../images/calendarSmall.png';
 import Clock from '../../images/clock.png';
-import Doctor from '../../images/doctor1.jpg';
+import Doctor from '../../images/md.jpg';
 
-const Cards = ({doctor, specialty, address1, address2, appDate, appTime, cancelAppointment}) =>{
+const Cards = ({doctor, specialty, appDate, appTime, cancelAppointment}) =>{
     return(
             <main className="cards">
                 <div className="container">
@@ -17,11 +17,11 @@ const Cards = ({doctor, specialty, address1, address2, appDate, appTime, cancelA
                 </div>  
                 </header>
 
-                <section className="profileDetails">
+                {/* <section className="profileDetails">
                     <div className="location"><img src={Location} alt="location icon"/>
                     <p>{address1}</p></div>
                     <p>{address2}</p>
-                </section>
+                </section> */}
 
                 <section className="profileDate">
                 <div className="profileleft">

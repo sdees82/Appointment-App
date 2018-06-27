@@ -12,10 +12,10 @@ const Canceled = ({doctor, specality, appDate, canAppList, clearApp}) =>{
             </div>
             <p>You have No canceled visits</p>
            <p></p>
-           <div className="canceledDate">
+           {/* <div className="canceledDate">
             <img src=""/>
             <p></p>
-        </div>
+        </div> */}
         </div>:
 
          <div className="canceledContainer">

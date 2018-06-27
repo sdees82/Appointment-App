@@ -13,9 +13,10 @@ const Appointment = ({open, onCloseModal, onOpenModal, bookAppointment, handleCh
                 <h4>Select a Doctor</h4>
                 <select id=" doctor" onChange={handleChangeDoctor}>
                     <option>Select a Doctor</option>
-                    <option defaultValue>Dr. Anthony Wagner</option>
-                    <option>Dr. Mark Newton</option>
-                    <option>Dr. Sarah Kelly</option>
+                    <option defaultValue>Dr Winger Michael</option>
+                    <option>Dr. Stephanie Satz</option>
+                    <option>Dr Zaher Amjad</option>
+                    <option>Dr. Charles McFarlane</option>
                 </select>
 
                 <h4>Select a date</h4>
@@ -28,8 +29,8 @@ const Appointment = ({open, onCloseModal, onOpenModal, bookAppointment, handleCh
                 <h4>Select a time</h4>
                 <select id=" appTime" onChange={handleChangeTime}>
                     <option>Select a time</option>
-                    <option>8am</option>
-                    <option>9am</option>
+                    <option>8:30am</option>
+                    <option>9:30am</option>
                 </select>
 
                 <button onClick={bookAppointment}>Book Appointment</button>
@@ -44,11 +45,11 @@ const Appointment = ({open, onCloseModal, onOpenModal, bookAppointment, handleCh
             <div className="profilePic">
                 <img src={Me}/>
             </div>
-            <select>
+            {/* <select>
                 <option selected>Sean Dees</option>
                 <option>Jeff Green</option>
                 <option>Jane Mansfield</option>
-            </select>
+            </select> */}
             </div>
          </div>
     );

@@ -15,7 +15,8 @@
     padding: .5rem 0;
     right: 4rem;
     /* height: 5rem; */
-    width: 13rem;
+    width: 25%;
+    min-width: 11rem;
     background: linear-gradient(to right, #9495ea, #6c6de4 );
     border-radius: .3rem;
 }

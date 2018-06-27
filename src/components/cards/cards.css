@@ -15,12 +15,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* padding: 0rem 2rem; */
+    padding-bottom: 2rem;
 }
 .cardsContainer .cards .container .cardsHeader .profilePic{
     width: 4rem;
     height: 4rem;
-    margin-right: .5rem;
+    margin-right: .7rem;
     border-radius: 2rem;
     background: #f6c5e6;
     box-shadow: 0px 4px 20px #e3e4f7;
@@ -36,45 +36,39 @@
     font-size: .9rem;
     margin: .2rem 0;
 }
-.cardsContainer .cards .container .profileDetails{
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.cardsContainer .cards .container .profileDetails .location{
-    display: flex;
-    width: 80%;
-    margin: auto;
-
-}
-
-.cardsContainer .cards .container .profileDetails p{
-    margin: 0 auto;
-    color: #1b1751;
-}
 
 .cardsContainer .cards .container .profileDate{
     padding:0 0 1rem 0;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     color: #1b1751;
+    font-weight: bold;
 }
 .cardsContainer .cards .container .profileDate .profileleft{
     display: flex;
     align-items: center;
     padding-right: .5rem;
     line-height: .1rem;
+    margin-bottom: 1rem;
+    font-size: 1;
+    color: #8180dd;
 }
 .cardsContainer .cards .container .profileDate .profileRight{
     display: flex;
     align-items: center;
     line-height: .1rem;
 }
+
+.cardsContainer .cards .container .profileDate .profileRight span{
+    padding-right: 1.2rem;
+    font-size: 1;
+    color: #8180dd;
+}
 .cardsContainer .cards .container .profileDate img{
-    padding-right: .3rem;
+    padding-right: .7rem;
 }
 .button{
     border-radius: 1rem;

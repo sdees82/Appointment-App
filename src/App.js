@@ -15,33 +15,15 @@ class App extends Component {
       appDate:"",
       appTime: "",
       greeting: false,
-      appointments: [{
-        doctor: "Dr. Anthony Wagner",
-        specialty: "Dermatologist",
-        address1: "1268 High St apt #2",
-        address2: "Windsor, ON",
-        appDate: "6/24/2018",
-        appTime: "2:30pm",
-      },
-      {
-        doctor: "Dr. Sarah Kelly",
-        specialty: "Dermatologist",
-        address1: "1268 High St apt #2",
-        address2: "Windsor, ON",
-        appDate: "6/24/2018",
-        appTime: "2:30pm",
-      },{
-        doctor: "Dr. Anthony Wagner",
-        specialty: "Dermatologist",
-        address1: "1268 High St apt #2",
-        address2: "Windsor, ON",
-        appDate: "6/24/2018",
-        appTime: "2:30pm",
-      }],
+      appointments: [],
       canAppList: [{
         doctor: "",
         specialty: "",
         appTime: ""
+      }],
+      today: [{
+        doctor: "",
+        specialty: ""
       }]
     }
   }
@@ -58,19 +40,9 @@ handleChangeTime = (e) =>{
   this.setState({...this.state.appointments.appTime, appTime: e.target.value});
 }
 
-todayAlert = (newApp) =>{
-  const d = new Date();
-  const month = d.getMonth();
-  const day = d.getDate();
-  const year = d.getFullYear();
-  const currentDate = `${month + 1}/${day}/${year}`;
-  newApp.addDate == currentDate ? console.log("success"): console.log("not a success");
-  console.log(currentDate);
-  console.log(newApp.appDate);
-}
 
+// clear today's appointments and cancelled appointments displays
 clearApp = () =>{
-  console.log("connected");
   let clearVisits = [{
     doctor: "",
     specialty: "",
@@ -79,6 +51,15 @@ clearApp = () =>{
  this.setState({canAppList: clearVisits});  
 }
 
+clearAlert = () =>{
+  let clearToday = [{
+    doctor: "",
+    specialty: "",
+  }];
+  this.setState({today: clearToday});
+}
+
+//Adds appointments to the dashboard
   bookAppointment = (e) =>{
     e.preventDefault();
     const newApp = {
@@ -94,8 +75,25 @@ clearApp = () =>{
     this.todayAlert(newApp);
 }
 
+//Add today appointments to alert box
+todayAlert = (newApp) =>{
+  const previousAlerts = this.state.today[0].doctor !== ""? [...this.state.today] :[];
+  const d = new Date();
+  const month = d.getMonth();
+  const day = d.getDate();
+  const year = d.getFullYear();
+  const currentDate = `${month + 1}/${day}/${year}`;
+  if(newApp.appDate === currentDate){
+   previousAlerts.push(newApp);
+   this.setState({today: previousAlerts});
+  }
+}
+
+//removes appointments from the dashboard
 cancelAppointment = (e) =>{
   let newState = [...this.state.appointments];
+  let alertState = [...this.state.today];
+
   const {doctor, specialty, appDate} = newState[e];
   const previousAppointments = this.state.canAppList[0].doctor !== ""? [...this.state.canAppList] :[];
 
@@ -108,17 +106,20 @@ cancelAppointment = (e) =>{
   previousAppointments.push(newAppList);
 
     delete newState[e];
+    delete alertState[e];
+    console.log(alertState);
     this.setState({canAppList: previousAppointments});
     this.setState({appointments: newState});
-    console.log(this.state.canAppList);
-    console.log("previous Appointments", previousAppointments);
+    // this.setState({today: alertState});
 }
 
+//open book an appointment modal
   onOpenModal = () =>{
     this.setState({ open: true });
     console.log("clicked");
   }
 
+// closes book an appointment modal
   onCloseModal = () =>{
     this.setState({ open: false });
   }
@@ -127,13 +128,13 @@ cancelAppointment = (e) =>{
   }
 
   render() {
-    const {open, greeting, appointments, canAppList} = this.state;
+    const {open, greeting, appointments, canAppList, today, locations} = this.state;
    
     return (
       <div className="App">
       <Appointment open={open} greeting={greeting} onCloseModal={this.onCloseModal} onOpenModal={this.onOpenModal} bookAppointment={this.bookAppointment} handleChangeDoctor={this.handleChangeDoctor} handleChangeDate={this.handleChangeDate} handleChangeTime={this.handleChangeTime}/>
        <Sidebar changeRoute={this.changeRoute}/>
-       <MainContainer appointments={appointments} canAppList={canAppList} cancelAppointment={this.cancelAppointment} routes={this.state.routes} clearApp={this.clearApp}/>
+       <MainContainer today={today} appointments={appointments} canAppList={canAppList} cancelAppointment={this.cancelAppointment} routes={this.state.routes} clearApp={this.clearApp} clearAlert={this.clearAlert} locations={locations}/>
       </div>
     );
   }

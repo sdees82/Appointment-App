@@ -5,11 +5,11 @@ import Messages from '../messages/messages';
 import Payment from '../payment/payment';
 import Inbox from '../inbox/inbox';
 
-const MainContainer = ({routes, appointments, cancelAppointment, canAppList, clearApp}) =>{
+const MainContainer = ({locations,routes, appointments, cancelAppointment, canAppList, clearApp, today, clearAlert}) =>{
     return(
         <div className="mainContainer">
         { routes === "dashboard"?
-            <Dashboard appointments={appointments} canAppList={canAppList} cancelAppointment={cancelAppointment} clearApp={clearApp}/>:
+            <Dashboard locations={locations} today={today} appointments={appointments} canAppList={canAppList} cancelAppointment={cancelAppointment} clearApp={clearApp} clearAlert={clearAlert}/>:
             <Payment/>
         }
         </div>

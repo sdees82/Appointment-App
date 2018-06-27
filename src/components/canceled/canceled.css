@@ -31,10 +31,10 @@
     color: #fff;
     margin: 0;
 }
-.canceled div .canceledContainer div p:nth-child(1){
+.canceled div .canceledContainer p:nth-child(1){
     margin: 0;
 }
-.canceled div .canceledContainer div p:nth-child(3){
+.canceled div .canceledContainer p:nth-child(3){
     color: #e28383;
     font-weight: bold;
     margin: 0;
