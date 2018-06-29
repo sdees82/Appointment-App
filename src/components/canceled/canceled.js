@@ -12,10 +12,6 @@ const Canceled = ({doctor, specality, appDate, canAppList, clearApp}) =>{
             </div>
             <p>You have No canceled visits</p>
            <p></p>
-           {/* <div className="canceledDate">
-            <img src=""/>
-            <p></p>
-        </div> */}
         </div>:
 
          <div className="canceledContainer">
@@ -29,7 +25,7 @@ const Canceled = ({doctor, specality, appDate, canAppList, clearApp}) =>{
                      {
                          return (
                     <div className="canceledDetails" key={index}>
-                   <p>{`${canAppList[index].doctor} - ${canAppList[index].specialty}`}</p>
+                   <p>{`${canAppList[index].doctor}`}</p>
                    <div className="canceledDate">
                     <img src=""/>
                     <p>{canAppList[index].appDate}</p>

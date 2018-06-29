@@ -21,7 +21,7 @@ const Alert = ({today, clearAlert}) =>{
                 <h3>Alert</h3>
                 <p onClick={clearAlert} className="dots">...</p>
             </div>
-            <p>{`You have ${today.length} visits today:`}</p>
+            <p>{`You have ${today.length} visit(s) today:`}</p>
             {
                   today.map((val, index)=>{
                       return(

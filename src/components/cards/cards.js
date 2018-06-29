@@ -13,7 +13,8 @@ const Cards = ({doctor, specialty, appDate, appTime, cancelAppointment}) =>{
                 <img className="profilePic" src={Doctor}/>
                 <div className="profileTitle">
                     <p>{doctor}</p>
-                    <p>{specialty}</p>
+                    {/* <p>{specialty}</p> */}
+                    <p>Dermatologist</p>
                 </div>  
                 </header>
 

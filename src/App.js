@@ -15,15 +15,24 @@ class App extends Component {
       appDate:"",
       appTime: "",
       greeting: false,
-      appointments: [],
+      appointments: [{
+        doctor: "Dr. Stephanie Satz",
+        appDate: "6/30/2018",
+        appTime: "9:30am"
+      },{
+        doctor: "Dr. Zaher Amjad",
+        appDate: "7/4/2018",
+        appTime: "8:30am"
+      },{
+        doctor: "Dr. Charles McFarlane",
+        appDate: "7/10/2018",
+        appTime: "8:30am"}],
       canAppList: [{
         doctor: "",
-        specialty: "",
         appTime: ""
       }],
       today: [{
         doctor: "",
-        specialty: ""
       }]
     }
   }
@@ -68,6 +77,7 @@ clearAlert = () =>{
       appTime: this.state.appTime
     };
 
+
     this.setState(prevState => ({
       appointments: [...prevState.appointments, newApp]
   }));
@@ -99,24 +109,18 @@ cancelAppointment = (e) =>{
 
   const newAppList = {
     doctor: doctor,
-    specialty: specialty,
     appDate: appDate
   };
   
   previousAppointments.push(newAppList);
 
-    delete newState[e];
-    delete alertState[e];
-    console.log(alertState);
     this.setState({canAppList: previousAppointments});
     this.setState({appointments: newState});
-    // this.setState({today: alertState});
 }
 
 //open book an appointment modal
   onOpenModal = () =>{
     this.setState({ open: true });
-    console.log("clicked");
   }
 
 // closes book an appointment modal
