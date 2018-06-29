@@ -85,14 +85,18 @@ clearAlert = () =>{
     this.todayAlert(newApp);
 }
 
-//Add today appointments to alert box
-todayAlert = (newApp) =>{
-  const previousAlerts = this.state.today[0].doctor !== ""? [...this.state.today] :[];
+getCurrentDate = ()=>{
   const d = new Date();
   const month = d.getMonth();
   const day = d.getDate();
   const year = d.getFullYear();
-  const currentDate = `${month + 1}/${day}/${year}`;
+  return `${month + 1}/${day}/${year}`;
+}
+
+//Add today appointments to alert box
+todayAlert = (newApp) =>{
+  const previousAlerts = this.state.today[0].doctor !== ""? [...this.state.today] :[];
+  const currentDate = this.getCurrentDate();
   if(newApp.appDate === currentDate){
    previousAlerts.push(newApp);
    this.setState({today: previousAlerts});
