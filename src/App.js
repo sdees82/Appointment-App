@@ -114,6 +114,11 @@ cancelAppointment = (e) =>{
   
   previousAppointments.push(newAppList);
 
+    delete newState[e];
+    alertState = {
+      doctor: ""
+    }
+    console.log(alertState);
     this.setState({canAppList: previousAppointments});
     this.setState({appointments: newState});
 }
@@ -121,6 +126,7 @@ cancelAppointment = (e) =>{
 //open book an appointment modal
   onOpenModal = () =>{
     this.setState({ open: true });
+    console.log("clicked");
   }
 
 // closes book an appointment modal
