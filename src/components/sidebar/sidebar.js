@@ -1,12 +1,12 @@
 import React from 'react';
-import New from '../../images/new.png';
+// import New from '../../images/new.png';
 import Dashboard from '../../images/dashboard.png';
-import Folder from '../../images/folder.png';
-import Chart from '../../images/chart.png';
-import Chat from '../../images/chat.png';
-import Calendar from '../../images/calendar.png';
+// import Folder from '../../images/folder.png';
+// import Chart from '../../images/chart.png';
+// import Chat from '../../images/chat.png';
+// import Calendar from '../../images/calendar.png';
 import Payment from '../../images/payment.png';
-import Email from '../../images/email.png';
+// import Email from '../../images/email.png';
 import './sidebar.css';
 
 

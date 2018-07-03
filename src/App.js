@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import 
 import './App.css';
 import Appointment from './components/appointment/appointment';
 import Sidebar from './components/sidebar/sidebar';
@@ -57,7 +58,7 @@ clearApp = () =>{
     specialty: "",
     appDate: ""
   }];
- this.setState({canAppList: clearVisits});  
+ this.setState({...this.state.canAppList, canAppList: clearVisits});  
 }
 
 clearAlert = () =>{
@@ -65,7 +66,7 @@ clearAlert = () =>{
     doctor: "",
     specialty: "",
   }];
-  this.setState({today: clearToday});
+  this.setState({...this.state.today, today: clearToday});
 }
 
 //Adds appointments to the dashboard
@@ -108,7 +109,7 @@ cancelAppointment = (e) =>{
   let newState = [...this.state.appointments];
   let alertState = [...this.state.today];
 
-  const {doctor, specialty, appDate} = newState[e];
+  const {doctor,appDate} = newState[e];
   const previousAppointments = this.state.canAppList[0].doctor !== ""? [...this.state.canAppList] :[];
 
   const newAppList = {

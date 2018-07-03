@@ -2,11 +2,6 @@ import React, { Component } from 'react'
 import './googleMaps.css';
 import GoogleMapReact from 'google-map-react'
 import {Satz, Winger, Amjad, Mcfarlane} from '../doctors/doctors';
-const AnyReactComponent = ({ text }) => <div>{ text }</div>;
-
-const myMapComponent = (props)=>{
-
-}
 
 class GoogleMaps extends Component {
   constructor({props}){

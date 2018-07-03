@@ -7,8 +7,10 @@
     "react": "^16.4.0",
     "react-calendar": "^2.15.2",
     "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
     "react-responsive-modal": "^3.0.3",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

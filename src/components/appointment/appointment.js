@@ -50,13 +50,8 @@ const Appointment = ({open, onCloseModal, onOpenModal, bookAppointment, handleCh
             }
             <div className="profileContainer">
             <div className="profilePic">
-                <img src={Me}/>
+                <img src={Me} alt="profile icon"/>
             </div>
-            {/* <select>
-                <option selected>Sean Dees</option>
-                <option>Jeff Green</option>
-                <option>Jane Mansfield</option>
-            </select> */}
             </div>
          </div>
     );

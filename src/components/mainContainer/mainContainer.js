@@ -1,9 +1,9 @@
 import React from 'react';
 import './mainContainer.css';
 import Dashboard from '../dashboard/dashboard';
-import Messages from '../messages/messages';
+// import Messages from '../messages/messages';
 import Payment from '../payment/payment';
-import Inbox from '../inbox/inbox';
+// import Inbox from '../inbox/inbox';
 
 const MainContainer = ({locations,routes, appointments, cancelAppointment, canAppList, clearApp, today, clearAlert}) =>{
     return(
