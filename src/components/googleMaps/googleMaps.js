@@ -17,7 +17,7 @@ render() {
     return (
       <div className='googleMaps'>
         <GoogleMapReact
-        bootstrapURLKeys={{key: "AIzaSyCRdd7X61u0Sd_jDBpknEj_P6l_maMqi4A"}}
+        bootstrapURLKeys={{key: "AIzaSyD0p3J6Khhzo9-RPh91nLnapZwIDKCVbYc"}}
           defaultCenter={ this.props.center }
           defaultZoom={ this.props.zoom }>
           <Satz
